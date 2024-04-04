@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
          useMaterial3: false,
       ),
-      home: DashboardScreen(),
+      home: LoginScreen(),
     );
   }
 }

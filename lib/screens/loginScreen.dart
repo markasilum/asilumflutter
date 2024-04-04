@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
           child: Container(
         padding: EdgeInsets.all(40),
         width: 450,
-        height: 600,
+        height: 650,
         decoration: BoxDecoration(
             color: Colors.grey[300], borderRadius: BorderRadius.circular(15)),
         child: Column(
@@ -52,6 +52,7 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 60),
             TextButton(
               onPressed: (){
+                  Navigator.pop(context);
                  Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
               },
               child: Container(

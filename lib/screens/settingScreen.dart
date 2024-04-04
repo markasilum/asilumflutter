@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:asilumflutter/widgets/sidebarWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -29,10 +31,20 @@ class SettingScreen extends StatelessWidget {
                       image: DecorationImage(
                         image: AssetImage("/images/addu-jacinto.jpg"),
                         fit: BoxFit.fitWidth,
-                       alignment: Alignment.topCenter
+                       alignment: Alignment.bottomCenter
                        
                       )
                     ),
+                    child: ClipRRect(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+                      
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.0)),
+                      ),
+                    ),
+                  ),
                   )),
                 Positioned(
                     bottom: 15,

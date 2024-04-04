@@ -31,6 +31,7 @@ class SideBar extends StatelessWidget {
           SizedBox(height: 40),
           TextButton(
             onPressed: (){
+               Navigator.pop(context);
                Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
             }, 
             child: Container(
@@ -51,6 +52,7 @@ class SideBar extends StatelessWidget {
             SizedBox(height: 5),
           TextButton(
             onPressed: (){
+               Navigator.pop(context);
                Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingScreen()));
             }, 
             child: Container(
@@ -71,6 +73,7 @@ class SideBar extends StatelessWidget {
              SizedBox(height: 5),
           TextButton(
             onPressed: (){
+               Navigator.pop(context);
                Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
             }, 
             child: Container(

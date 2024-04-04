@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:asilumflutter/widgets/sidebarWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -27,18 +29,28 @@ class ProfileScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: AssetImage("/images/addu-jacinto.jpg"),
+                        image: AssetImage("/images/addu-students.jpg"),
                         fit: BoxFit.fitWidth,
                        alignment: Alignment.topCenter
                        
                       )
                     ),
+                    child: ClipRRect(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
+                      
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.0)),
+                      ),
+                    ),
+                  ),
                   )),
                 Positioned(
                     bottom: 15,
                     left: 20,
                     child: Text(
-                      "Settings",
+                      "Profile",
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
